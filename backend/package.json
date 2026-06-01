@@ -4,13 +4,13 @@
   "description": "WEMS Backend - SQLite + Prisma",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
-    "dev": "nodemon server.js",
-    "db:setup": "npx prisma migrate dev --name init",
-    "db:migrate": "npx prisma migrate dev",
-    "db:studio": "npx prisma studio",
-    "db:seed-prices": "node prisma/seedPrices.js"
-  },
+  "start": "npx prisma db push && node server.js",
+  "dev": "nodemon server.js",
+  "db:setup": "npx prisma migrate dev --name init",
+  "db:migrate": "npx prisma migrate dev",
+  "db:studio": "npx prisma studio",
+  "db:seed-prices": "node prisma/seedPrices.js"
+},
   "dependencies": {
     "@prisma/client": "^5.7.1",
     "bcryptjs": "^2.4.3",
